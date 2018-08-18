@@ -3,6 +3,12 @@ package coding;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 顺时针打印矩阵
+ * 注意边界和条件
+ * @author liyn
+ *
+ */
 public class PrintMatrix {
 
 	public void printClockWisely(int[][] nums) {

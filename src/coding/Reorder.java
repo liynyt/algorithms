@@ -1,7 +1,16 @@
 package coding;
 
+/**
+ * 调整数组顺序，使奇数位于偶数前
+ * @author liyn
+ *
+ */
 public class Reorder {
 
+	/**
+	 * 
+	 * @param nums
+	 */
 	public void reorder(int[] nums) {
 		if(nums.length == 0) {
 			return;
@@ -9,12 +18,14 @@ public class Reorder {
 		int i = 0;
 		int j = nums.length-1;
 		while( true ) {
+			//移动直到指向偶数
 			while(nums[i] % 2 == 1) {
 				i++;
 				if(i == nums.length) {
 					break;
 				}
 			}
+			//移动直到指向奇数
 			while(nums[j] % 2 == 0) {
 				j--;
 				if(j == 0) {

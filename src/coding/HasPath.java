@@ -1,5 +1,11 @@
 package coding;
 
+/**
+ * 回溯法？？？
+ * 题目：矩阵中的路径：上下左右一格，经过了某一格，路径不能再次进入
+ * @author liyn
+ *
+ */
 public class HasPath {
 	private int row;
 	private int col;

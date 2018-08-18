@@ -96,12 +96,15 @@ public class RedBlackBST <Key extends Comparable<Key>, Value>{
 			}
 		}
 		
-		if(isRed(node.left) && isRed(node.left.left)) {
-			node = rotateRight(node);
-		}
+		//中间：左旋
 		if(isRed(node.right) && !isRed(node.left)) {
 			node = rotateLeft(node);
 		}
+		//左，最小：右旋
+		if(isRed(node.left) && isRed(node.left.left)) {
+			node = rotateRight(node);
+		}
+		//右，最大：颜色转换
 		if(isRed(node.left) && isRed(node.right)) {
 			flipColor(node);
 		}

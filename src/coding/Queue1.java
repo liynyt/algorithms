@@ -1,5 +1,11 @@
 package coding;
 
+/**
+ * 题目：两个栈实现队列
+ * 方法：stack1：插入  stack2：删除（空、非空）
+ * @author liyn
+ *
+ */
 public class Queue1 {
 	private Stack stack1;
 	private Stack stack2;

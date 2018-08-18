@@ -1,6 +1,13 @@
 package coding;
 
 public class Match {
+	
+	/**
+	 * 正则表达式匹配 '.'匹配任意，'*'出现任意次数
+	 * @param string
+	 * @param pattern
+	 * @return
+	 */
 	public boolean match(String string, String pattern) {
 		if(string.length() == 0) {
 			return false;

@@ -66,6 +66,11 @@ public class BST <Key extends Comparable<Key>, Value>{
 		node.N = size(node.left) + size(node.right) +1;
 		return node;
 	}
+	/**
+	 * 只有当右子树中存在 <= key,才会出现在右子树中
+	 * @param key
+	 * @return
+	 */
 	public Key floor(Key key) {
 		Node node = floor(root, key);
 		if(node == null) {
@@ -139,6 +144,9 @@ public class BST <Key extends Comparable<Key>, Value>{
 			}
 		}
 	}
+	/**
+	 * 递归：持续跟进左结点，直到左结点为空，返回右
+	 */
 	public void delMin() {
 		delMin(root);
 	}
@@ -150,6 +158,10 @@ public class BST <Key extends Comparable<Key>, Value>{
 		node.N = size(node.left) + size(node.right) + 1;
 		return node;
 	}
+	/**
+	 * 保存被删除连接->后继节点min(t.right)->右=delMin(t.right)把后继补在node处->左 = t.left
+	 * @param key
+	 */
 	public void delete(Key key) {
 		delete(root, key);
 	}

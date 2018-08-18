@@ -2,6 +2,12 @@ package coding;
 
 import java.util.Arrays;
 
+/**
+ * ÌøÌ¨½×
+ * ·½·¨£ºDP£ºdp[n]=dp[n-1] + dp[n-2]
+ * @author liyn
+ *
+ */
 public class JumpFloor {
 	
 	public int jumpFloor1(int n ) {

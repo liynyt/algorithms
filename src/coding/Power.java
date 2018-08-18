@@ -1,5 +1,11 @@
 package coding;
 
+/**
+ * 数值的整数次方：写函数
+ * 方法：a的N次方等于 a的N/2 * a的N/2 (*a)   用右移代替除以2
+ * @author liyn
+ *
+ */
 public class Power {
 
 	public double power(double base, int exponent) {

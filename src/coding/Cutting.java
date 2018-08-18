@@ -1,6 +1,16 @@
 package coding;
 
+/**
+ * 剪绳子，最大乘积
+ * @author liyn
+ *
+ */
 public class Cutting {
+	/**
+	 * dp
+	 * @param length
+	 * @return
+	 */
 	public int cutDp(int length) {
 		if(length < 2) {
 			return 0;
@@ -24,6 +34,11 @@ public class Cutting {
 		return products[length];
 	}
 
+	/**
+	 * 贪心算法：先剪3，若剩1，则将一个3与1补成4，剪2个2.
+	 * @param length
+	 * @return
+	 */
 	public int cutting(int length) {
 		if(length < 2) {
 			return 0;

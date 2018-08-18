@@ -23,6 +23,14 @@ public class BinaryTree {
 	public TreeNode getTreeNode() {
 		return new TreeNode();
 	}
+	
+	/**
+	 * 题目：重建二叉树（前序—+中序）
+	 * 方法：前序找到根->中序找到根->递归
+	 * @param pre
+	 * @param in
+	 * @return
+	 */
 	public TreeNode reconstructTree(int[] pre, int[] in) {
 		 return reconstructTree(pre,0,pre.length-1, in, 0, in.length-1);
 	}
@@ -47,6 +55,13 @@ public class BinaryTree {
 		return root;
 	}
 
+	/**
+	 * 题目：二叉树的下一个节点
+	 * 方法：有右子树：右子树中最左
+	 * 		 无右子树：第一个左子包含指向该父节点的节点
+	 * @param treeNode
+	 * @return
+	 */
 	public TreeNode getMidNext(TreeNode treeNode) {
 		if(treeNode.right != null) {
 			treeNode = treeNode.right;
@@ -66,6 +81,15 @@ public class BinaryTree {
 		return null;
 	}
 	
+
+
+	/**
+	 * 判断树的子结构
+	 * 方法：判断根（递归） -> 判断结构是否相同
+	 * @param root1
+	 * @param root2
+	 * @return
+	 */
 	public boolean hasSubTree(TreeNode root1, TreeNode root2) {
 		boolean flag = false;
 		if(root1 != null && root2 != null) {
@@ -107,6 +131,12 @@ public class BinaryTree {
 //		mirror(root.left);
 //		mirror(root.right);
 //	}
+	/**
+	 * 二叉树的镜像
+	 * 方法：交换左右，判断左右的下一层
+	 * @param root
+	 * @return
+	 */
 	public TreeNode mirror(TreeNode root) {
 		if(root == null) {
 			return null;
@@ -117,6 +147,12 @@ public class BinaryTree {
 		return root;
 	}
 	
+	/**
+	 * 对称的二叉树
+	 * 方法：镜像是否相同
+	 * @param root
+	 * @return
+	 */
 	public boolean isSymmetrical(TreeNode root) {
 		if(root == null) {
 			return true;
@@ -156,6 +192,17 @@ public class BinaryTree {
 		return 1+ Math.max(heightR, heightL);
 	}
 	
+	/**
+	 * 打印二叉树
+	 * 方法：BFS（queue）
+	 * @param root
+	 * @return
+	 */
+	/**
+	 * 不分行
+	 * @param root
+	 * @return
+	 */
 	public List<Integer> printFromTopToBottom(TreeNode root){
 		List<Integer> results = new ArrayList<>();
 		Queue<TreeNode> queue = new LinkedList<>();
@@ -173,6 +220,11 @@ public class BinaryTree {
 		}
 		return results;
 	}
+	/**
+	 * 分行
+	 * @param root
+	 * @return
+	 */
 	public List<List<Integer>> printAsRow(TreeNode root){
 		Queue<TreeNode> queue = new LinkedList<>();
 		List<List<Integer>> results = new ArrayList<>();
@@ -197,6 +249,11 @@ public class BinaryTree {
 		}
 		return results;
 	}
+	/**
+	 * 之字形
+	 * @param root
+	 * @return
+	 */
 	public List<List<Integer>> printAs(TreeNode root){
 		List<List<Integer>> results = new ArrayList<>();
 		Queue<TreeNode> queue = new LinkedList<>();
@@ -223,6 +280,12 @@ public class BinaryTree {
 		return results;
 	}
 	
+	/**
+	 * 后序遍历
+	 * 方法：左子树<根<右子树
+	 * @param sequence
+	 * @return
+	 */
 	public boolean verifySequenceOfBST(int[] sequence) {
 		if(sequence.length == 0) {
 			return false;
@@ -254,6 +317,10 @@ public class BinaryTree {
 		return verifySequenceOfBST(sequence, begin, begin + leftSize-1) && verifySequenceOfBST(sequence, begin + leftSize, end-1);
 	}
 	
+	/**
+	 * 和为某一值的路径
+	 * 方法：DFS：递归
+	 */
 	private List<List<Integer>> results = new ArrayList<>();
 	public List<List<Integer>> findPath(TreeNode root, int value){
 		findPath(root, value, 0, new ArrayList<>());
@@ -275,6 +342,10 @@ public class BinaryTree {
 		path.remove(path.size() - 1);
 	}
 	
+	/**
+	 * 二叉搜索树转换成排序的双向链表
+	 * 方法：中序遍历
+	 */
 	private TreeNode pre = new TreeNode();
 	public TreeNode convert(TreeNode root) {
 		if(root == null) {
@@ -299,6 +370,12 @@ public class BinaryTree {
 		inOrder(root.right);
 	}
 	
+	/**
+	 * 序列化二叉树
+	 * 方法：前序
+	 * @param root
+	 * @param nums
+	 */
 	public void serialize(TreeNode root, List<String> nums) {
 		if(root == null) {
 			nums.add("$");

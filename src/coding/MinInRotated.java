@@ -1,6 +1,12 @@
 package coding;
 
 
+/**
+ * 旋转数组（前面的元素搬到后面）的最小数字 {3，4，5，1，2}是{1，2，3，4，5}的旋转数组，最小值1
+ * 二分法查找最小值（最小值是两个有序数组的分界）
+ * @author liyn
+ *
+ */
 public class MinInRotated {
 	public int getMin(int[] nums) {
 		int i = 0;

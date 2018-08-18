@@ -13,15 +13,21 @@ public class LinkedList {
 		public Node() {
 			
 		}
-//		public Node(int val) {
-//			item = val;
-//		}
 	}
 	public Node getNode() {
 		return new Node();
 	}
 	
-	
+	/**
+	 * 题目：从尾到头打印链表
+	 * @param node
+	 * @return
+	 */
+	/**
+	 * 1、stack
+	 * @param node
+	 * @return
+	 */
 	public List<Integer> printLink(Node node) {
 		List<Integer> results = new ArrayList<>();
 		Stack stack = new Stack();
@@ -34,6 +40,11 @@ public class LinkedList {
 		}
 		return results;
 	}
+	/**
+	 * 2、递归
+	 * @param node
+	 * @return
+	 */
 	public List<Integer> print(Node node){
 		List<Integer> results = new ArrayList<>();
 		if(node != null) {
@@ -42,6 +53,11 @@ public class LinkedList {
 		}
 		return results;
 	}
+	/**
+	 * 3、集合反转
+	 * @param node
+	 * @return
+	 */
 	public List<Integer> printA(Node node){
 		List<Integer> results = new ArrayList<>();
 		while(node != null) {
@@ -51,6 +67,11 @@ public class LinkedList {
 		Collections.reverse(results);
 		return results;
 	}
+	/**
+	 * 4、头插法
+	 * @param node
+	 * @return
+	 */
 	public List<Integer> printAdd(Node node){
 		List<Integer> results = new ArrayList<>();
 		Node head= new Node();
@@ -68,6 +89,10 @@ public class LinkedList {
 		return results;
 	}
 	
+	/**
+	 * 头插法反转链表
+	 * @param head
+	 */
 	public void reverse(Node head) {
 		Node pre = null;
 		Node next = head;
@@ -79,6 +104,14 @@ public class LinkedList {
 		}
 	}
 	
+	
+	/**
+	 * 合并链表
+	 * 方法：类似归并
+	 * @param node1
+	 * @param node2
+	 * @return
+	 */
 	public Node merge(Node node1, Node node2) {
 		if(node1 == null ) {
 			return node2;
@@ -125,6 +158,13 @@ public class LinkedList {
 		return head;
 	}
 	
+	/**
+	 * 删除链表节点
+	 * 方法：覆盖法：是尾节点：前一个指向null
+	 * 				不是尾节点：用next覆盖，指向next.next
+	 * @param head
+	 * @param node
+	 */
 	public void deleteNode(Node head, Node node) {
 		if(head == null || head.next == null || node == null) {
 			return;
@@ -184,6 +224,13 @@ public class LinkedList {
 	}
 
 	
+	/**
+	 * 倒数第k个
+	 * 方法：双指针： P1头，P2从头到K->P1、P2一起移动至P2到尾，P1即倒数第K。
+	 * @param head
+	 * @param k
+	 * @return
+	 */
 	public Node lastKnumber(Node head, int k) {
 		Node one = head;
 		Node two = head;
@@ -209,6 +256,13 @@ public class LinkedList {
 		return two;
 	}
 	
+	/**
+	 * 环的入口节点
+	 * 方法：判断是否有环（双指针不同速度移动至相遇）-> P1回头节点，P2在相遇处，下一次相遇在入口
+	 * 		x+2y = x+y+z
+	 * @param head
+	 * @return
+	 */
 	public Node getEntry(Node head) {
 		if(head == null || head.next == null) {
 			return null;
@@ -230,6 +284,12 @@ public class LinkedList {
 		return null;
 	}
 	
+	/**
+	 * 复杂链表的复制（虚节点）
+	 * 方法：将复制节点连接在原始节点，在拆分
+	 * @param head
+	 * @return
+	 */
 	public Node clone(Node head) {
 		Node node = head;
 		while(node != null) {

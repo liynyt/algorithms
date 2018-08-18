@@ -1,5 +1,12 @@
 package coding;
 
+/**
+ * 打印从1到最大的n位数
+ * 方法：用数组代替int，避免溢出
+ *       全排列打印
+ * @author liyn
+ *
+ */
 public class PrintMaxN {
 
 	public void print(int n ) {
@@ -16,6 +23,11 @@ public class PrintMaxN {
 		incrementRecursive(nums, -1);
 	}
 
+	/**
+	 * 全排列
+	 * @param nums
+	 * @param idx
+	 */
 	public void incrementRecursive(char[] nums, int idx) {
 		if(idx == nums.length-1) {
 			printNum(nums);

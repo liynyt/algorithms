@@ -1,5 +1,11 @@
 package coding;
 
+/**
+ * 回溯法？？？
+ * 题目：机器人的运动范围：上下左右运动一个，不能进入行坐标和列坐标数位之和大于K的格子
+ * @author liyn
+ *
+ */
 public class Moving {
 	private int[][] next = {{0, -1}, {0, 1}, {1, -1}, {1, 1}};
 	public int movingCount(int k, int row, int col) {

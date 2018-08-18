@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * ÅÅÁĞ×éºÏ
+ * @author liyn
+ *
+ */
 public class Permutation {
 	
 	private List<String> results = new ArrayList<>();

@@ -1,6 +1,11 @@
 package coding;
 
 public class ReplaceSpace {
+	/**
+	 * ÌâÄ¿£ºÌæ»»¿Õ¸ñ
+	 * £¿
+	 * @param string
+	 */
 	public void replaceSpace(String string) {
 		String[] strings = string.split(" ");
 		String string2 = new String();

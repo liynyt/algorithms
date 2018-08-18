@@ -1,5 +1,10 @@
 package coding;
 
+/**
+ * FibonacciµÄµÚnÏî
+ * @author liyn
+ *
+ */
 public class Fibonacci {
 	public int fibonacci1(int n) {
 		if (n==0) {
