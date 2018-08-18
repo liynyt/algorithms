@@ -1,7 +1,7 @@
 package coding;
 
 /**
- * FibonacciµÄµÚnÏî
+ * Fibonacciç¬¬né¡¹
  * @author liyn
  *
  */
