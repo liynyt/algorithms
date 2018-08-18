@@ -3,8 +3,8 @@ package coding;
 import java.util.Arrays;
 
 /**
- * ÌøÌ¨½×
- * ·½·¨£ºDP£ºdp[n]=dp[n-1] + dp[n-2]
+ * è·³å°é˜¶
+ * æ–¹æ³•ï¼šDPï¼šdp[n]=dp[n-1] + dp[n-2]
  * @author liyn
  *
  */
